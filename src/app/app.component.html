@@ -1,13 +1,9 @@
 <h1>{{title}}</h1>
 
-<button (click)="onClick()">{{isHidden ? 'Hide' : 'Show'}}</button>
+<div>HEADER</div>
 
-<ul *ngIf="isHidden">
-  <li *ngFor="let student of students">
-    <span>{{student.name}} </span>
-    <span>{{student.age}} </span>
-    <span>{{student.grade}}</span>
-  </li>
-</ul>
+<div id="content">
+  <app-students-list [studentArray]="students" (addStudent)="addNewStudentHandler($event)"></app-students-list>
+</div>
 
-<app-home></app-home>
+<div>FOOTER</div>

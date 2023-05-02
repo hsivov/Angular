@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Output } from '@angular/core';
+import { Student } from './interfaces/student';
 
 @Component({
   selector: 'app-root',
@@ -25,8 +26,8 @@ export class AppComponent {
       grade: 5.88
     }
   ]
-  isHidden = false;
-  onClick() {
-    this.isHidden = !this.isHidden;
+
+  addNewStudentHandler(newStudent: Student): void{
+    this.students.push(newStudent);
   }
 }

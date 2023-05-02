@@ -1,0 +1,10 @@
+<div>
+    <input #studentNameInput type="text">
+    <input #studentAgeInput type="number">
+    <input #studentGradeInput type="number">
+    <button (click)="addNewStudentHandler(studentNameInput, studentAgeInput, studentGradeInput)">Add Student</button>
+</div>
+
+<div id="container">
+    <app-students-list-item *ngFor="let student of studentArray" [student]="student"></app-students-list-item>
+</div>
